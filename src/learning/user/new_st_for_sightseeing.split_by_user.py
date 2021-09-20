@@ -180,7 +180,7 @@ def run(args, group_count, step_count, data_file_name, train_ratio=0.8):
     else:
         experiment = Experiment(
             api_key="rAOeE45NqnekTXmKrqg0Do12C",
-            project_name="test",
+            project_name="uem-training",
             workspace="707728642li",
         )
 
