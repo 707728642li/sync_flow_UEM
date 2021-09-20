@@ -59,7 +59,9 @@ for line in $( cat $3 ) ; do
 
 		done_f=done_${f##.*/}_${s}_${r}_split_by_${1}_$tag
 		# touch ${done_f} && aws s3 cp ${done_f} ${s3_done}
+		aws s3 sync ./pkl_model/ ${s3_model}
+		[ `ls ./pkl_model/ | wc -l` -eq 0 ] || mv ./pkl_model/* ./pkl_bkp/
 done
 
-aws s3 sync ./pkl_model/ ${s3_model}
-[ `ls ./pkl_model/ | wc -l` -eq 0 ] || mv ./pkl_model/* ./pkl_bkp/
+#aws s3 sync ./pkl_model/ ${s3_model}
+#[ `ls ./pkl_model/ | wc -l` -eq 0 ] || mv ./pkl_model/* ./pkl_bkp/
