@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 usage="Usage: bash ${0} time|user s|t|st|base batch_file"
-s3='s3://kyoto-shi-photos/group_share/li/test_result'
+s3='s3://kyoto-shi-photos/group_share/result0916'
 s3_done="${s3}/done/"
 s3_model="${s3}/pkl_model/"
 s3_doing="${s3}/doing/"
